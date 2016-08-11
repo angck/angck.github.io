@@ -1,0 +1,10 @@
+@charset "UTF-8";
+.container {width: 600px; margin: 0 auto; padding: 40px 0 80px; background-color: #fff;}
+.post {margin: 0 0 30px;}
+.posttitle { line-height: 20px; padding: 8px 0; border-bottom: 1px solid #ddd;}
+.posttitle a{font-size: 16px; font-weight: 600; color: #0097f1;}
+.posttext p {padding: 10px 0;}
+.postfooter {overflow: hidden; height: 30px; line-height: 30px;}
+.postfooter a {color: #333;}
+.postdate {float: left;}
+.posttags {float: right;}
