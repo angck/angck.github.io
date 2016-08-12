@@ -1,4 +1,4 @@
-baseurl: ``
+baseurl:
 markdown: redcarpet
 safe: false
 highlighter: pygments
@@ -12,5 +12,5 @@ encoding: utf-8
 
 username: angck
 name: LA
-description:  No Silver Bullet.
+description:  记录当下，惠利未来
 url: https://angck.github.io
