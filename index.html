@@ -10,7 +10,7 @@ layout: default
             <div class="posttitle">
                 <a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a>
             </div>
-            <p> {{ post.summary }} </p>
+            <p> {{ post.excerpt | strip_html }} </p>
         </div>
         <div class="postfooter">
             <div class="postdate">
