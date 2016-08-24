@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>通过viewport + REM的方式来兼容1像素边框</title>
+    <script>
+        var viewport = document.querySelector("meta[name=viewport]");
+        if(window.devicePixelRatio == 1) {
+            viewport.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no');
+        }
+        if(window.devicePixelRatio == 2) {
+            viewport.setAttribute('content', 'width=device-width, initial-scale=.5, maximum-scale=.5, minimum-scale=.5, user-scalable=no');
+        }
+        if(window.devicePixelRatio == 3) {
+            viewport.setAttribute('content', 'width=device-width, initial-scale=.3333333333333333333333, maximum-scale=.3333333333333333333333, minimum-scale=.3333333333333333333333, user-scalable=no');
+        }
+        (function(doc, win) {
+            var docEl = doc.documentElement,
+                UA = navigator.userAgent,
+                isPad = /ipad/ig.test(UA),
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth >= 750 && !isPad) clientWidth = 750;
+                    docEl.style.fontSize = 20 * (clientWidth / 375) + 'px';
+                };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <style>
+        body,ul {margin: 0; padding: 0;}
+        .box {list-style-type: none; } 
+        li {color: #666; font-size: .7rem; padding: 0 .5rem; line-height: 2.2rem; border-bottom: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <ul class="box">
+        <li>列表内容！！！</li>
+        <li>列表内容！！！</li>
+        <li>列表内容！！！</li>
+        <li>列表内容！！！</li>
+        <li>列表内容！！！</li>
+    </ul>
+</body>
+</html>

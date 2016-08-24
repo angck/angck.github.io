@@ -1,8 +1,9 @@
 @charset "UTF-8";
-.container {padding: 40px 0 80px; width: 600px; margin: 0 auto; background-color: #fff;}
-.posttitle {padding: 0 0 8px; margin: 0 0 20px; border-bottom: 1px solid #aaa;}
+.container {padding: 40px 15px 80px; max-width: 600px; margin: 0 auto; background-color: #fff;}
+.posttitle {padding: 0 0 8px; margin: 0 0 15px; border-bottom: 1px solid #aaa;}
 .posttitle a {font-size: 20px; font-weight: 600;}
 .post .posttext ul {overflow: hidden; margin: 0 0 0 2em;}
-.post .posttext li {padding: 5px 0;}
+.post .posttext li {padding: 5px 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
 .post .posttext blockquote {font-size: 16px; color: #888;}
-.tag a {padding: 0 5px;}
+.tag {overflow: hidden;}
+.tag a {padding: 5px 8px; margin: 5px 0 0; float: left;}
