@@ -1,4 +1,12 @@
-Git 备忘清单
+---
+layout: post
+title: Git 命令清单
+cssLink: /stylesheets/article.css
+summary: git 命令说明
+tags: git command
+---
+
+Git 命令清单
 ===
 
 本备忘单总结了常用的 [Git](https://git-scm.com/) 命令行指令，以供快速参考。
