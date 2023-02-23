@@ -81,10 +81,10 @@ location /js/ {
     # 打开concat 功能
     # 默认关闭
     concat on;
-    # 允许concat最大的文件数（http://m114.org/test/??1.css,2.css,3.css...10.css） 默认最大设置十个文件。
+    # 允许concat最大的文件数（http://localhost/test/??1.css,2.css,3.css...10.css） 默认最大设置十个文件。
     # (默认: 10)
     # concat_max_files 10;
-    # 只允许相同类型的文件（例：http://m114.org/test/??m114.css,m23.js 默认情况下是不允许的）
+    # 只允许相同类型的文件（例：http://localhost/test/??m114.css,m23.js 默认情况下是不允许的）
     # 默认是开启的
     # concat_unique on;
     # 允许内容的类型
@@ -107,10 +107,10 @@ location /js/ {
     # 打开concat 功能
     # 默认关闭
     concat on;
-    # 允许concat最大的文件数（http://m114.org/test/??1.css,2.css,3.css...10.css） 默认最大设置十个文件。
+    # 允许concat最大的文件数（http://localhost/test/??1.css,2.css,3.css...10.css） 默认最大设置十个文件。
     # (默认: 10)
     # concat_max_files 10;
-    # 只允许相同类型的文件（例：http://m114.org/test/??m114.css,m23.js 默认情况下是不允许的）
+    # 只允许相同类型的文件（例：http://localhost/test/??m114.css,m23.js 默认情况下是不允许的）
     # 默认是开启的
     # concat_unique on;
     # 允许内容的类型
